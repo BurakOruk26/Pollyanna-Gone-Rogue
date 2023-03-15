@@ -34,9 +34,9 @@ public class BulletBehaivor : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision){
-        if (collision.gameObject.tag == "Enemy"){
+        if (collision.tag == "Enemy"){
             Debug.Log("hit");
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
